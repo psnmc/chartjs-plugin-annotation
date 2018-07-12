@@ -119,7 +119,7 @@ module.exports = function(Chart) {
 			model.clip = {
 				x1: chartArea.left,
 				x2: chartArea.right,
-				y1: chartArea.top,
+				y1: chartArea.top - 15,
 				y2: chartArea.bottom
 			};
 
@@ -256,8 +256,8 @@ module.exports = function(Chart) {
 				ctx.textBaseline = 'middle';
 				ctx.fillText(
 					view.labelContent,
-					view.labelX + (view.labelWidth / 2),
-					view.labelY + (view.labelHeight / 2)
+					Math.floor(view.labelX + (view.labelWidth / 2)),
+					Math.floor(view.labelY + (view.labelHeight / 2))
 				);
 			}
 
